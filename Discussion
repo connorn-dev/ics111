@@ -1,0 +1,23 @@
+// Discussion of issues in example3 & custom test used
+
+When solving the sudoku example 3 I ran into no issues. Once I got my code working and solving example1
+and example2, example3 got solved with no issues. So while I didn't run into any issues I looked at the 
+sudoku and could see why some implementations would run into issues. The major difference between example3
+and the others is example3 is a lot harder problem to solve, so a poor, or at least slow implementation
+of a solver using recursion would run into long running times as the sudoku would take a while to solve. 
+Specifically implementations that made more recursive calls than needed would be quiet slow, as the 
+complex sudoku uses a lot of backtracing, more than example1 and example2. 
+
+While I didn't run into issues with example3, I did run into issues with my CustomTest. For my test I 
+figured the easiest way to test the two methods was to give the tests the hardest sudoku problems I could
+find. Because if it could sovle at least two of those. Then it should be able to solve just about any
+sudoku. So with two hard sudoku's I made a test to check the legal values in one of the sudoku's. 
+The test checked 3 different cells, one at the start that was already filled, one at the start that was 
+empty, and one at the end of the sudoku. With all those tests passing, I then tested to solve the sudoku's. 
+When solving both sudoku's they are very complex and require lots of backtracing, backtracing is time 
+intensive. This is because evertime a value does'nt work it has to work it's way back, with the possibility
+of having to restart from the first cell. Because of this my test has a long running time. On my macbook, 
+it takes about 10-11 seconds to complete. 
+
+That is the main issue I have thought of with my solution and tests, although there could be other 
+ones I am missing. 
